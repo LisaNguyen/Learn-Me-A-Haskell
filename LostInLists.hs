@@ -61,3 +61,16 @@ multiplesOfThree = take 6 [3,6..]
 
 repeatLOL = take 10 (repeat "LOL")
 cycleLOLz = take 12 (cycle "LOLz ")
+
+--LIST COMPREHENSIONS
+multiplesOfTwo = [x * 2 | x <- [1..10]]
+
+--adding in a predicate
+greaterThan12 = [x*2 | x <- [1..10], x*2 > 12]
+
+--two lists
+prodOfLists = [x*y | x <- [1..5], y<- [6..10]]
+
+boomBang xs = [if x < 10 then "BOOM!" else "BANG!" | x <- xs, odd x]
+
+removeLowerCase st = [x | x <- st, x `elem` ['A'..'Z']]
